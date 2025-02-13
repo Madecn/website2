@@ -2465,7 +2465,7 @@
 						r(new M("Unsupported protocol " + p + ":", M.ERR_BAD_REQUEST, t));
 						return
 					}
-					l.send(o || null)
+					
 				})
 			};
 			let tC = {
