@@ -620,7 +620,7 @@
 						link: "https://hailuoai.video/"
 					}, {
 						label: "Talkie",
-						.html "https://www.talkie-ai.com/"
+						link: "https://www.talkie-ai.com/"
 					}]
 				}, {
 					title: "About us",
