@@ -348,8 +348,8 @@
 						content: (0, l.jsxs)("div", {
 							className: "",
 							children: [(0, l.jsx)(o(), {
-								width: 120,
-								height: 120,
+								width: 36,
+								height: 36,
 								className: "rounded-lg mx-auto block",
 								alt: "微信公众号",
 								src: r.gk
