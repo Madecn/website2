@@ -100,51 +100,51 @@
 						icon: "https://filecdn.minimax.chat/public/0397b5e5-2bbf-4809-87a8-152ccec93384.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_text_1",
-							link: "https://minimax.io/news/minimax-01-%E7%B3%BB%E5%88%97",
+							link: "https://minimax.com/news/minimax-01-%E7%B3%BB%E5%88%97",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_2",
-							link: "https://minimax.io/news/minimax-01-%E7%B3%BB%E5%88%97",
+							link: "https://minimax.com/news/minimax-01-%E7%B3%BB%E5%88%97",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_3",
-							link: "https://minimax.io/news/%E9%80%9A%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8Babab65%E7%B3%BB%E5%88%97"
+							link: "https://minimax.com/news/%E9%80%9A%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8Babab65%E7%B3%BB%E5%88%97"
 						}]
 					}, {
 						title: "official_website_navigation_tech_speech",
 						icon: "https://filecdn.minimax.chat/public/0d100ea3-8cbc-4f3f-b441-01cff540a97b.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_speech_2",
-							link: "https://minimax.io/news/t2a-01-hd-%E5%8F%91%E5%B8%83",
+							link: "https://minimax.com/news/t2a-01-hd-%E5%8F%91%E5%B8%83",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_speech_1",
-							link: "https://minimax.io/news/%E8%AF%AD%E9%9F%B3%E5%A4%A7%E6%A8%A1%E5%9E%8Bspeech-01"
+							link: "https://minimax.com/news/%E8%AF%AD%E9%9F%B3%E5%A4%A7%E6%A8%A1%E5%9E%8Bspeech-01"
 						}]
 					}, {
 						title: "official_website_navigation_tech_music",
 						icon: "https://filecdn.minimax.chat/public/2bd65ab6-5479-4d96-9acc-f216d3da938a.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_music_1",
-							link: "https://minimax.io/news/%E9%9F%B3%E4%B9%90%E6%A8%A1%E5%9E%8Bmusic-01"
+							link: "https://minimax.com/news/%E9%9F%B3%E4%B9%90%E6%A8%A1%E5%9E%8Bmusic-01"
 						}]
 					}, {
 						title: "official_website_navigation_tech_video",
 						icon: "https://filecdn.minimax.chat/public/3d9d4c04-de2f-4203-a50d-38eafd2847a1.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_S2V_1",
-							link: "https://minimax.io/news/s2v-01%E5%8F%91%E5%B8%83",
+							link: "https://minimax.com/news/s2v-01%E5%8F%91%E5%B8%83",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_video_1",
-							link: "https://minimax.io/news/i2v-01-live-%E5%8F%91%E5%B8%83",
+							link: "https://minimax.com/news/i2v-01-live-%E5%8F%91%E5%B8%83",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_video_2",
 							link: "https://hailuoai.com/video"
 						}, {
 							title: "official_website_navigation_tech_video_3",
-							link: "https://minimax.io/news/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8Bvideo-01"
+							link: "https://minimax.com/news/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8Bvideo-01"
 						}]
 					}]
 				}, {
@@ -156,16 +156,16 @@
 						title: "official_website_navigation_aboutus_company",
 						subMenu: [{
 							title: "official_website_navigation_aboutus_company_1",
-							link: "https://minimax.io/about"
+							link: "https://minimax.com/about"
 						}]
 					}, {
 						title: "official_website_navigation_aboutus_news",
 						subMenu: [{
 							title: "official_website_navigation_aboutus_news_1",
-							link: "https://minimax.io/news"
+							link: "https://minimax.com/news"
 						}, {
 							title: "official_website_navigation_aboutus_news_2",
-							link: "https://minimax.io/news"
+							link: "https://minimax.com/news"
 						}]
 					}, {
 						title: "official_website_navigation_aboutus_job",
@@ -185,51 +185,51 @@
 						icon: "https://filecdn.minimax.chat/public/0397b5e5-2bbf-4809-87a8-152ccec93384.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_text_1",
-							link: "https://minimax.io/news/minimax-01-series-2",
+							link: "https://minimax.com/news/minimax-01-series-2",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_2",
-							link: "https://minimax.io/news/minimax-01-series-2",
+							link: "https://minimax.com/news/minimax-01-series-2",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_3",
-							link: "https://minimax.io/news/abab65-series"
+							link: "https://minimax.com/news/abab65-series"
 						}]
 					}, {
 						title: "official_website_navigation_tech_speech",
 						icon: "https://filecdn.minimax.chat/public/0d100ea3-8cbc-4f3f-b441-01cff540a97b.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_speech_2",
-							link: "https://minimax.io/news/speech-01-hd-release",
+							link: "https://minimax.com/news/speech-01-hd-release",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_speech_1",
-							link: "https://minimax.io/news/speech-01"
+							link: "https://minimax.com/news/speech-01"
 						}]
 					}, {
 						title: "official_website_navigation_tech_music",
 						icon: "https://filecdn.minimax.chat/public/2bd65ab6-5479-4d96-9acc-f216d3da938a.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_music_1",
-							link: "https://minimax.io/news/music-01"
+							link: "https://minimax.com/news/music-01"
 						}]
 					}, {
 						title: "official_website_navigation_tech_video",
 						icon: "https://filecdn.minimax.chat/public/3d9d4c04-de2f-4203-a50d-38eafd2847a1.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_S2V_1",
-							link: "https://minimax.io/news/s2v-01-release",
+							link: "https://minimax.com/news/s2v-01-release",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_video_1",
-							link: "https://minimax.io/news/i2v-01-live-release",
+							link: "https://minimax.com/news/i2v-01-live-release",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_video_2",
 							link: "https://hailuoai.video/"
 						}, {
 							title: "official_website_navigation_tech_video_3",
-							link: "https://minimax.io/news/video-01"
+							link: "https://minimax.com/news/video-01"
 						}]
 					}]
 				}, {
@@ -241,7 +241,7 @@
 						title: "official_website_navigation_aboutus",
 						subMenu: [{
 							title: "official_website_navigation_aboutus_company",
-							link: "https://minimax.io/about"
+							link: "https://minimax.com/about"
 						}]
 					}]
 				}]
