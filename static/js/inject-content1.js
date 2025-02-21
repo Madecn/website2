@@ -1,56 +1,36 @@
 const originalCreateElement = document.createElement;
-
-// 设置一个标志位，初始为 false，表示还未检测到目标元素
-let hasHidden = false;
+// console.log = "12321321"
+// alert("Hello! I am an alert box!!");
+// 设置一个标志位数组，用于记录检测过的元素
+let hiddenElements = new Set();
 
 document.createElement = function (tagName) {
   const element = originalCreateElement.call(document, tagName);
 
-  // 检查是否生成了目标元素
+  // 每次创建元素后，异步检查是否生成了目标元素
   setTimeout(() => {
-    // 如果已经执行过隐藏操作，直接返回，停止检测
-    if (hasHidden) return;
+    // 查找目标元素（可能存在多个）
+    const targetElements = document.querySelectorAll(
+      ".bg-\\[\\#000\\].px-\\[64px\\].pt-\\[80px\\].undefined.pb-\\[80px\\]"
+    );
 
-    // 查找目标元素
-    const targetElement = document.querySelector(".bg-\\[\\#000\\].px-\\[64px\\].pt-\\[80px\\].undefined.pb-\\[80px\\]");
+    targetElements.forEach((targetElement) => {
+      // 排除你创建的特定元素，例如带有 id="my-main" 的元素
+      if (hiddenElements.has(targetElement) || targetElement.id === "my-main") return;
 
-    // 如果找到目标元素
-    if (targetElement) {
-      console.log("Hiding the target element:", targetElement); // 打印日志
-      targetElement.style.display = "none"; // 隐藏目标元素
-      hasHidden = true; // 设置标志位为 true，停止后续检测
-      console.log("Stopped detection after hiding the target element");
-    }
+      // 打印日志，确认找到目标元素
+      console.log("Hiding the target element:", targetElement);
+
+      // 删除目标元素
+      targetElement.remove();
+
+      // 记录已经处理过的元素，防止重复操作
+      hiddenElements.add(targetElement);
+    });
   }, 0);
 
   return element;
 };
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const observer = new MutationObserver(function (mutationsList, observer) {
-//     // 查找所有目标元素
-//     const elements = document.querySelectorAll(".w-full.h-full.mx-auto.overflow-scroll.relative.pt-\\[0px\\].flex.flex-col.swiper-no-swiping.pb-\\[120px\\].select-none");
-
-//     // 如果发现第 4 个元素，立即移除它
-//     if (elements.length >= 4) {
-//       console.log("Removing the 4th element:", elements[3]); // 打印日志
-//       elements[3].remove(); // 移除第 4 个元素
-//     }
-//   });
-
-//   // 监听整个文档的 DOM 变化
-//   observer.observe(document.body, { childList: true, subtree: true });
-// });
-
-// setTimeout(function () {
-//   const elements = document.querySelectorAll(".w-full.h-full.mx-auto.overflow-scroll.relative.pt-[0px].flex.flex-col.swiper-no-swiping.pb-[120px].select-none");
-//   console.log("Number of elements found after delay:", elements.length);
-//   if (elements.length >= 4) {
-//     elements[3].style.display = "none";
-//   }
-// }, 1000); // 延迟 1 秒
-
-// 创建一个 <div> 元素
 
 
 // 创建一个新的 <div> 元素
@@ -59,7 +39,7 @@ const newMain = document.createElement("main");
 
 // 设置 <div> 的内容
 newMain.innerHTML = `
-  <main class="bg-[#000] px-[64px] pt-[80px] undefined pb-[80px]">
+  <main class="bg-[#000] px-[64px] pt-[80px] undefined pb-[80px]" id="my-main">
 			<section class="mx-auto max-w-[1820px] pb-[80px] lg:flex md:justify-between md:h-[328px] text-[16px] leading-[24px] [border-bottom:1px_solid_#323232]">
 				<div><img alt="logo" loading="lazy" width="200" height="64" decoding="async" data-nimg="1" class="mt-[-6px] mb-[24px]" style="color:transparent" src="static/picture/6bef0882-3057-455c-a4ad-2f63ed292be2.png">
 					<div class="flex gap-[12px] mb-[8px]">
@@ -67,8 +47,9 @@ newMain.innerHTML = `
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M20.3046 16.7523L26.3733 9.84961H24.9354L19.6636 15.8418L15.4561 9.84961H10.6021L16.9661 18.9117L10.6021 26.1496H12.0399L17.6037 19.8201L22.048 26.1496H26.9021L20.3046 16.7523ZM18.3346 18.9913L17.6888 18.0883L12.5585 10.9103H14.7674L18.9089 16.7054L19.552 17.6083L24.9347 25.1406H22.7258L18.3346 18.9913Z"
 									fill="#fff"></path>
-							</svg></div>
-							<div class="hover:cursor-pointer group">
+							</svg>
+					</div>
+					<div class="hover:cursor-pointer group">
 						<img width="36" height="36" viewbox="0 0 36 36" src="./public/131144.png" style="object-fit: contain;" />
 					</div>
 						<div class="hover:cursor-pointer group cursor-pointer"><svg width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,16 +156,19 @@ newMain.innerHTML = `
 `;
 
 // 设置 <div> 的样式或其他属性（可选）
-newMain.class = "bg-[#000] px-[64px] pt-[80px] undefined pb-[80px]";
-newMain.style.color = "#333";
-newMain.style.fontFamily = "Arial, sans-serif";
+// newMain.class = "bg-[#000] px-[64px] pt-[80px] undefined pb-[80px]";
+
+newMain.style.display = "none";
 
 // 将新元素插入到页面中
 document.addEventListener("DOMContentLoaded", function () {
   // 插入到 <body> 的最后
   //document.body.appendChild(newDiv);
   document.body.appendChild(newMain);
-  
+  setTimeout(() => {
+    //newDiv.style.display = "block";
+	newMain.style.display = "block";
+  }, 20); // 延迟 1 秒后显示
 
   // 如果想插入到某个特定元素之前，例如 <header> 的前面：
   // const header = document.querySelector("header");

@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[8381], {
 		27809: function(i, e, t) {
@@ -33,7 +33,7 @@
 					icon: "https://filecdn.minimax.chat/public/6204533f-1614-4108-966b-ce3c92d6f8fe.png?x-oss-process=image/format,webp",
 					subMenu: [{
 						title: "official_website_navigation_product_platform_1",
-						link: "/platform.html"
+						link: "/en/platform.html"
 					}, {
 						title: "official_website_navigation_product_platform_2",
 						link: "".concat(n.vi, "/examination-center/text-experience-center/cc_v2")
@@ -42,7 +42,7 @@
 						link: "".concat(n.vi, "/document/Announcement?key=66701c5e1d57f38758d58180")
 					}, {
 						title: "official_website_navigation_product_platform_4",
-						link: "/price.html"
+						link: "/en/price"
 					}]
 				}, {
 					title: "official_website_navigation_product_xingye",
@@ -66,21 +66,21 @@
 						link: "https://www.hailuo.ai/audio",
 						isNew: !0
 					}, {
-						title: "Hailuo AI Chat",
-						link: "https://www.hailuo.ai/chat"
+						title: "MiniMax Chat",
+						link: "https://chat.minimax.io/"
 					}]
 				}, {
 					title: "official_website_navigation_product_platform",
 					icon: "https://filecdn.minimax.chat/public/6204533f-1614-4108-966b-ce3c92d6f8fe.png?x-oss-process=image/format,webp",
 					subMenu: [{
 						title: "official_website_navigation_product_platform_1",
-						link: "/platform.html"
+						link: "/en/platform.html"
 					}, {
 						title: "official_website_navigation_product_platform_3",
 						link: "".concat(n.RI, "/document/platform%20introduction?key=66701c8e1d57f38758d58198")
 					}, {
 						title: "official_website_navigation_product_platform_4",
-						link: "/price.html"
+						link: "/en/price"
 					}]
 				}, {
 					title: "official_website_navigation_product_xingye",
@@ -100,15 +100,15 @@
 						icon: "https://filecdn.minimax.chat/public/0397b5e5-2bbf-4809-87a8-152ccec93384.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_text_1",
-							link: "/minimax-01-%E7%B3%BB%E5%88%97.html",
+							link: "/en/minimax-01-%E7%B3%BB%E5%88%97.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_2",
-							link: "/minimax-01-%E7%B3%BB%E5%88%97.html",
+							link: "/en/minimax-01-%E7%B3%BB%E5%88%97.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_3",
-							link: "%E9%80%9A%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8Babab65%E7%B3%BB%E5%88%97.html"
+							link: "/%E9%80%9A%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8Babab65%E7%B3%BB%E5%88%97.html"
 						}]
 					}, {
 						title: "official_website_navigation_tech_speech",
@@ -133,15 +133,15 @@
 						icon: "https://filecdn.minimax.chat/public/3d9d4c04-de2f-4203-a50d-38eafd2847a1.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_S2V_1",
-							link: "/s2v-01%E5%8F%91%E5%B8%83.html",
+							link: "/en/s2v-01%E5%8F%91%E5%B8%83.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_video_1",
-							link: "i2v-01-live-%E5%8F%91%E5%B8%83.html",
+							link: "/en/i2v-01-live-%E5%8F%91%E5%B8%83.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_video_2",
-							link: "/https://hailuoai.com/video"
+							link: "https://hailuoai.com/video"
 						}, {
 							title: "official_website_navigation_tech_video_3",
 							link: "/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8Bvideo-01.html"
@@ -156,16 +156,16 @@
 						title: "official_website_navigation_aboutus_company",
 						subMenu: [{
 							title: "official_website_navigation_aboutus_company_1",
-							link: "/about.html"
+							link: "/en/about.html"
 						}]
 					}, {
 						title: "official_website_navigation_aboutus_news",
 						subMenu: [{
 							title: "official_website_navigation_aboutus_news_1",
-							link: "/news.html"
+							link: "/en/news.html"
 						}, {
 							title: "official_website_navigation_aboutus_news_2",
-							link: "/news.html"
+							link: "/en/news.html"
 						}]
 					}, {
 						title: "official_website_navigation_aboutus_job",
@@ -185,40 +185,40 @@
 						icon: "https://filecdn.minimax.chat/public/0397b5e5-2bbf-4809-87a8-152ccec93384.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_text_1",
-							link: "/minimax-01-series-2.html",
+							link: "/en/minimax-01-series-2.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_2",
-							link: "/minimax-01-series-2.html",
+							link: "/en/minimax-01-series-2.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_3",
-							link: "/abab65-series.html"
+							link: "/en/abab65-series.html"
 						}]
 					}, {
 						title: "official_website_navigation_tech_speech",
 						icon: "https://filecdn.minimax.chat/public/0d100ea3-8cbc-4f3f-b441-01cff540a97b.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_speech_2",
-							link: "/speech-01-hd-release.html",
+							link: "/en/speech-01-hd-release.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_speech_1",
-							link: "/speech-01.html"
+							link: "/en/speech-01.html"
 						}]
 					}, {
 						title: "official_website_navigation_tech_music",
 						icon: "https://filecdn.minimax.chat/public/2bd65ab6-5479-4d96-9acc-f216d3da938a.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_music_1",
-							link: "/music-01.html"
+							link: "/en/music-01.html"
 						}]
 					}, {
 						title: "official_website_navigation_tech_video",
 						icon: "https://filecdn.minimax.chat/public/3d9d4c04-de2f-4203-a50d-38eafd2847a1.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_S2V_1",
-							link: "/s2v-01-release.html",
+							link: "/en/s2v-01-release.html",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_video_1",
@@ -229,7 +229,7 @@
 							link: "https://hailuoai.video/"
 						}, {
 							title: "official_website_navigation_tech_video_3",
-							link: "/video-01.html"
+							link: "/en/video-01.html"
 						}]
 					}]
 				}, {
@@ -241,7 +241,7 @@
 						title: "official_website_navigation_aboutus",
 						subMenu: [{
 							title: "official_website_navigation_aboutus_company",
-							link: "/about.html"
+							link: "/en/about.html"
 						}]
 					}]
 				}]
@@ -265,8 +265,8 @@
 				m = t(11047),
 				h = t(20057),
 				w = t(41762),
-				g = t(24426),
-				v = function(i) {
+				v = t(24426),
+				g = function(i) {
 					var e = i.isVisible,
 						t = i.cls,
 						n = (0, p.q_)({
@@ -360,7 +360,7 @@
 												fontFamily: n
 											},
 											children: "NEW"
-										}), (0, o.jsx)(v, {
+										}), (0, o.jsx)(g, {
 											cls: "ml-[12px]",
 											isVisible: r === i.title
 										})]
@@ -395,19 +395,19 @@
 					c = (0, a._)((0, l.useState)(null), 2),
 					_ = c[0],
 					d = c[1],
-					v = (0, a._)((0, l.useState)(!0), 2),
-					k = v[0],
-					j = v[1],
+					g = (0, a._)((0, l.useState)(!0), 2),
+					k = g[0],
+					j = g[1],
 					y = (0, l.useRef)(0),
 					F = (0, b.Z)(),
-					N = F.locale,
-					M = F.isEnglish,
-					A = F.isChinese,
-					B = (0, x.$G)().t,
+					M = F.locale,
+					N = F.isEnglish,
+					B = F.isChinese,
+					A = (0, x.$G)().t,
 					C = (0, a._)((0, l.useState)(!1), 2),
 					L = C[0],
 					S = C[1],
-					Z = (0, g.useRouter)();
+					Z = (0, v.useRouter)();
 				(0, l.useEffect)(function() {
 					var i = (0, h.Z)(function() {
 						var i = Math.max((0, m.M)(), 0);
@@ -419,11 +419,11 @@
 						}
 				}, []);
 				var q = (0, l.useCallback)(function(i) {
-						M && "official_website_navigation_aboutus" === i.title || d(i)
-					}, [M]),
+						N && "official_website_navigation_aboutus" === i.title || d(i)
+					}, [N]),
 					z = (0, l.useCallback)(function(i) {
-						M && "official_website_navigation_aboutus" === i.title && Z.push("/about.html")
-					}, [M]),
+						N && "official_website_navigation_aboutus" === i.title && Z.push("/about")
+					}, [N]),
 					I = (0, l.useCallback)(function() {
 						d(null)
 					}, []),
@@ -441,7 +441,7 @@
 							friction: 30
 						}
 					}),
-					H = (0, p.q_)({
+					X = (0, p.q_)({
 						backgroundColor: _ ? "rgba(255, 255, 255, 0)" : "rgba(255, 255, 255, 0.8)",
 						backdropFilter: _ ? "blur(0px)" : "blur(24px)",
 						WebkitBackdropFilter: _ ? "blur(0px)" : "blur(24px)",
@@ -450,18 +450,18 @@
 							easing: p.Z5.easeInOutCubic
 						}
 					}),
-					X = M ? u.BD : u.JL;
+					D = N ? u.BD : u.JL;
 				return (0, o.jsxs)("div", {
 					className: "h-[".concat(u.Mz, "px]"),
 					children: [(0, o.jsx)(p.q.div, {
-						style: (0, n._)({}, V, H),
+						style: (0, n._)({}, V, X),
 						className: "fixed top-0 left-0 z-[100] w-full h-[".concat(u.Mz, "px]"),
 						children: (0, o.jsxs)("div", {
 							className: "max-w-[1920px] h-full mx-auto flex items-center md:px-[60px]",
 							children: [(0, o.jsx)(f(), {
 								href: "/",
 								className: "no-underline cursor-pointer",
-								locale: N,
+								locale: M,
 								children: (0, o.jsx)(s(), {
 									width: 140,
 									height: 32,
@@ -472,7 +472,7 @@
 							}), (0, o.jsxs)("div", {
 								className: "h-full flex items-center gap-[24px] text-[#181E25] text-[16px] font-[400] ml-[18px] px-[30px] overflow-auto md:overflow-visible ",
 								onMouseLeave: I,
-								children: [X.map(function(i) {
+								children: [D.map(function(i) {
 									return (0, o.jsx)("div", {
 										className: "cursor-pointer text-[#181E25] px-[16px] py-[8px] rounded-[32px] transition-all duration-300 ease-in-out text-nowrap md:text-wrap",
 										style: {
@@ -484,14 +484,14 @@
 										onClick: function() {
 											return z(i)
 										},
-										children: B(i.title)
+										children: A(i.title)
 									}, i.title)
 								}), _ && (0, o.jsx)(E, {
 									title: null == _ ? void 0 : _.title,
 									menu: null == _ ? void 0 : _.menu,
 									page: e
 								})]
-							}), (void 0 === t || t) && A && (0, o.jsx)("div", {
+							}), (void 0 === t || t) && B && (0, o.jsx)("div", {
 								className: "ml-auto",
 								children: (0, o.jsx)(w.Z, {
 									open: L,
@@ -506,7 +506,7 @@
 												onClick: function() {
 													return S(!1)
 												},
-												children: B("official_website_region_switch_1")
+												children: A("official_website_region_switch_1")
 											}), (0, o.jsx)(f(), {
 												href: Z.asPath,
 												locale: "en",
@@ -514,13 +514,13 @@
 												onClick: function() {
 													return S(!1)
 												},
-												children: B("official_website_region_switch_0")
+												children: A("official_website_region_switch_0")
 											})]
 										})
 									},
 									children: (0, o.jsxs)("div", {
 										className: "flex items-center justify-end gap-[8px] min-w-[100px] text-[14px] cursor-pointer text-[#181E25] mr-[-16px] px-[16px] py-[8px] rounded-[32px] transition-all duration-300 ease-in-out",
-										children: [M ? B("official_website_region_switch_2") : B("official_website_region_switch_1"), (0, o.jsx)("svg", {
+										children: [N ? A("official_website_region_switch_2") : A("official_website_region_switch_1"), (0, o.jsx)("svg", {
 											xmlns: "http://www.w3.org/2000/svg",
 											width: "13",
 											height: "13",

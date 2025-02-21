@@ -1,39 +1,36 @@
 const originalCreateElement = document.createElement;
 
-// 检测到第 4 个元素 删除新闻动态
-let hasRemoved = false;
+// 设置一个标志位数组，用于记录检测过的元素
+let hiddenElements = new Set();
 
 document.createElement = function (tagName) {
   const element = originalCreateElement.call(document, tagName);
 
-  // 检查是否生成了目标元素
+  // 每次创建元素后，异步检查是否生成了目标元素
   setTimeout(() => {
-    // 如果已经执行过删除操作，直接返回，停止检测
-    if (hasRemoved) return;
+    // 查找目标元素（可能存在多个）
+	
+    const targetElements = document.querySelectorAll(
+      ".bg-\\[\\#000\\].px-\\[64px\\].pt-\\[80px\\].undefined"
+    );
 
-    // 查找目标元素
-    const elements = document.querySelectorAll(".w-full.h-full.mx-auto.overflow-scroll.relative.pt-\\[0px\\].flex.flex-col.swiper-no-swiping.pb-\\[120px\\].select-none");
-    
-    // 如果找到第 4 个元素
-    if (elements.length >= 4) {
-      console.log("Removing the 4th element:", elements[3]); // 打印日志
-      elements[3].remove(); // 删除第 4 个元素
-      hasRemoved = true; // 设置标志位为 true，停止后续检测
-      console.log("Stopped detection after removing the 4th element");
-    }
+    targetElements.forEach((targetElement) => {
+      // 排除你创建的特定元素，例如带有 id="my-main" 的元素
+      if (hiddenElements.has(targetElement) || targetElement.id === "my-main") return;
+
+      // 打印日志，确认找到目标元素
+      console.log("Hiding the target element:", targetElement);
+
+      // 删除目标元素
+      targetElement.remove();
+
+      // 记录已经处理过的元素，防止重复操作
+      hiddenElements.add(targetElement);
+    });
   }, 0);
 
   return element;
 };
-
-// 创建一个 <div> 元素
-const newDiv = document.createElement("div");
-newDiv.innerHTML = `
-  <div class="w-full h-full mx-auto overflow-scroll relative pt-[0px] flex flex-col swiper-no-swiping pb-[120px] select-none"><div class="ThreeBody_not-scroll-container__ieqP0" style="width: calc(1552px);"><div class="flex align-center justify-between mt-8 mb-6"><div><h2 class="font-medium text-[28px] text-[#181E25] mb-3">新闻动态</h2><p class="font-normal text-[16px] text-[#181E25] opacity-50 mb-0">结合科研能力和转化创新力量，协力拓展科技前沿，以应对社会尚未解决的需求</p></div><div class="flex items-center justify-center"><div class="ArrowButton_button__hcGfb bg-[#fff] w-[32px] h-[32px] rounded-full border-solid border border-[#181E25CC] mr-6 scale-x-[-1]" style="--secondary-color: #181E25CC;"><div class="ArrowButton_arrow-wrapper__4uafM undefined"><div class="ArrowButton_arrow__HMO8r undefined"></div></div></div><div class="ArrowButton_button__hcGfb bg-[#fff] w-[32px] h-[32px] rounded-full border-solid border border-[#181E25CC]" style="--secondary-color: #181E25CC;"><div class="ArrowButton_arrow-wrapper__4uafM undefined"><div class="ArrowButton_arrow__HMO8r undefined"></div></div></div></div></div></div><div class="swiper swiper-initialized swiper-horizontal swiper-css-mode w-full"><div class="swiper-wrapper ThreeBody_scroll-wrapper__u9OJq overflow-y-hidden"><div class="swiper-slide ThreeBody_placeholder__wh2ru swiper-slide-prev" style="width: calc(50% - 800px); margin-right: 24px;"></div><div class="swiper-slide w-auto swiper-slide-active" style="margin-right: 24px;"><a target="_blank" class="no-underline" href="/minimax%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%AF%8F%E6%97%A5%E4%B8%8E%E4%B8%96%E7%95%8C%E7%9A%8430%E4%BA%BF%E6%AC%A1%E4%BA%A4%E4%BA%92-3.html"><section class="group cursor-pointer flex flex-col max-w-[368px] px-[12px] pt-[12px] pb-[24px] rounded-[32px] border border-solid border-[#dedede]"><div class="max-w-[390px] max-h-[165px] overflow-hidden rounded-[28px]"><img alt="内容图" fetchpriority="high" width="390" height="207" decoding="async" data-nimg="1" class="rounded-[20px] group-hover:scale-110 transition-all" src="https://filecdn.minimax.chat/public/1c69fa00-86c6-4217-ac40-4cfc4d7d28da.jpg" style="color: transparent;"></div><section class="flex mt-[36px] mb-[24px] items-center justify-between h-[26px] text-[14px] px-[12px]"><div class="flex items-center flex-nowrap"><span class="flex-none font-[500] leading-normal text-[#000] opacity-95">文章</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none" class="mx-[12px] flex-none"><path d="M13 1L1 11" stroke="black"></path></svg><div class="flex flex-nowrap overflow-hidden flex-auto"><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">Link Day</span><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">伙伴日</span></div></div><span class="ml-[4px] text-[14px] text-[#000] opacity-95 leading-[18px] font-[350] whitespace-nowrap"></span></section><h3 class="px-[12px] h-[60px] line-clamp-2 p-0 m-0 text-[18px] leading-[30px] font-[500] mb-[18px] text-[#000] opacity-95 ">MiniMax大模型每日与世界的30亿次交互</h3><article class="flex mb-[36px] px-[12px]"><div class="h-[57px] line-clamp-3 break-all text-[14px] font-[400] text-[#000] leading-[19px] tracking-[0.5px]">成立两年半的MiniMax，第一次面对大家，讲了讲它的初心和愿景。MiniMax大模型已有日均 30 亿次 AI 交互量，每日处理3万亿token。基于MOE（混合专家架构）+ Linear Attention（线性注意力）的新一代模型技术的应用与多项最新研发成果，也在伙伴日中与大家见面。</div></article><div class="pr-[12px] flex justify-end"><div class="ArrowButton_button__hcGfb flex justify-center items-center w-[142px] h-[50px] rounded-[60px] bg-[#F7F8FA] text-[14px] text-[#181E25] font-[500] leading-normal"><span class="undefined">阅读更多</span><div class="ArrowButton_arrow-wrapper__4uafM undefined"><div class="ArrowButton_arrow__HMO8r undefined"></div></div></div></div></section></a></div><div class="swiper-slide w-auto swiper-slide-next" style="margin-right: 24px;"><a target="_blank" class="no-underline" href="/%E8%BF%99%E4%BA%9B%E7%94%A8%E4%B8%8Aminimax%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%AC%E5%8F%B8%E5%9C%A8next-level%E4%BA%86-2.html"><section class="group cursor-pointer flex flex-col max-w-[368px] px-[12px] pt-[12px] pb-[24px] rounded-[32px] border border-solid border-[#dedede]"><div class="max-w-[390px] max-h-[165px] overflow-hidden rounded-[28px]"><img alt="内容图" fetchpriority="high" width="390" height="207" decoding="async" data-nimg="1" class="rounded-[20px] group-hover:scale-110 transition-all" src="https://filecdn.minimax.chat/public/409ea6ba-585d-4153-b162-e5dd110b0efe.jpg" style="color: transparent;"></div><section class="flex mt-[36px] mb-[24px] items-center justify-between h-[26px] text-[14px] px-[12px]"><div class="flex items-center flex-nowrap"><span class="flex-none font-[500] leading-normal text-[#000] opacity-95">文章</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none" class="mx-[12px] flex-none"><path d="M13 1L1 11" stroke="black"></path></svg><div class="flex flex-nowrap overflow-hidden flex-auto"><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">语音模型</span><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">音乐模型</span></div></div><span class="ml-[4px] text-[14px] text-[#000] opacity-95 leading-[18px] font-[350] whitespace-nowrap"></span></section><h3 class="px-[12px] h-[60px] line-clamp-2 p-0 m-0 text-[18px] leading-[30px] font-[500] mb-[18px] text-[#000] opacity-95 ">这些用上MiniMax语音模型的公司在next level了</h3><article class="flex mb-[36px] px-[12px]"><div class="h-[57px] line-clamp-3 break-all text-[14px] font-[400] text-[#000] leading-[19px] tracking-[0.5px]">声音，无色无形，却温润有力。抑扬或顿挫、温声或细语，都是声音的独特魅力。在人类与AI的每一次对话中，声音为这份交流赋予更多情感色彩。
-自 2023 年 11 月至今，MiniMax 语音大模型已服务超过 2000 家企业用户，为语言学习、PC语音助手、语音声聊唱聊、超拟人情感配音等十余种场景提供落地解决方案。</div></article><div class="pr-[12px] flex justify-end"><div class="ArrowButton_button__hcGfb flex justify-center items-center w-[142px] h-[50px] rounded-[60px] bg-[#F7F8FA] text-[14px] text-[#181E25] font-[500] leading-normal"><span class="undefined">阅读更多</span><div class="ArrowButton_arrow-wrapper__4uafM undefined"><div class="ArrowButton_arrow__HMO8r undefined"></div></div></div></div></section></a></div><div class="swiper-slide w-auto" style="margin-right: 24px;"><a target="_blank" class="no-underline" href="/%E6%83%B3%E4%B8%8E%E6%98%9F%E9%87%8E%E6%B5%B7%E8%9E%BAai%E4%B8%BB%E5%88%9B%E5%9B%A2%E9%98%9F%E8%BF%91%E8%B7%9D%E7%A6%BB%E4%BA%A4%E6%B5%81%E6%88%91%E6%9D%A5%E5%AE%89%E6%8E%92.html"><section class="group cursor-pointer flex flex-col max-w-[368px] px-[12px] pt-[12px] pb-[24px] rounded-[32px] border border-solid border-[#dedede]"><div class="max-w-[390px] max-h-[165px] overflow-hidden rounded-[28px]"><img alt="内容图" fetchpriority="high" width="390" height="207" decoding="async" data-nimg="1" class="rounded-[20px] group-hover:scale-110 transition-all" src="https://filecdn.minimax.chat/public/c35d1c32-290b-4019-aec3-253c2f3fac0a.jpg" style="color: transparent;"></div><section class="flex mt-[36px] mb-[24px] items-center justify-between h-[26px] text-[14px] px-[12px]"><div class="flex items-center flex-nowrap"><span class="flex-none font-[500] leading-normal text-[#000] opacity-95">文章</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none" class="mx-[12px] flex-none"><path d="M13 1L1 11" stroke="black"></path></svg><div class="flex flex-nowrap overflow-hidden flex-auto"><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">星野</span><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">海螺AI</span></div></div><span class="ml-[4px] text-[14px] text-[#000] opacity-95 leading-[18px] font-[350] whitespace-nowrap"></span></section><h3 class="px-[12px] h-[60px] line-clamp-2 p-0 m-0 text-[18px] leading-[30px] font-[500] mb-[18px] text-[#000] opacity-95 ">想与星野、海螺AI主创团队近距离交流？我来安排！</h3><article class="flex mb-[36px] px-[12px]"><div class="h-[57px] line-clamp-3 break-all text-[14px] font-[400] text-[#000] leading-[19px] tracking-[0.5px]">2024年7月4日，世界人工智能大会（WAIC 2024）将在上海拉开帷幕。展览期间，MiniMax 将携海螺AI、星野与开放平台现身大会展区，展示“人工智能+”创新应用最新成果，带领观众体验AI的神奇魅力。</div></article><div class="pr-[12px] flex justify-end"><div class="ArrowButton_button__hcGfb flex justify-center items-center w-[142px] h-[50px] rounded-[60px] bg-[#F7F8FA] text-[14px] text-[#181E25] font-[500] leading-normal"><span class="undefined">阅读更多</span><div class="ArrowButton_arrow-wrapper__4uafM undefined"><div class="ArrowButton_arrow__HMO8r undefined"></div></div></div></div></section></a></div><div class="swiper-slide w-auto" style="margin-right: 24px;"><a target="_blank" class="no-underline" href="/%E9%81%8D%E5%B8%83180%E4%B8%AA%E5%9C%B0%E5%8C%BA%E7%9A%84%E6%B5%B7%E8%9E%BAai%E5%88%9B%E4%BD%9C%E8%80%85%E7%8E%A9%E8%BD%ACminimax%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B.html"><section class="group cursor-pointer flex flex-col max-w-[368px] px-[12px] pt-[12px] pb-[24px] rounded-[32px] border border-solid border-[#dedede]"><div class="max-w-[390px] max-h-[165px] overflow-hidden rounded-[28px]"><img alt="内容图" fetchpriority="high" width="390" height="207" decoding="async" data-nimg="1" class="rounded-[20px] group-hover:scale-110 transition-all" src="https://filecdn.minimax.chat/public/70755c51-b927-4a26-9f6b-266c6971d90b.jpg" style="color: transparent;"></div><section class="flex mt-[36px] mb-[24px] items-center justify-between h-[26px] text-[14px] px-[12px]"><div class="flex items-center flex-nowrap"><span class="flex-none font-[500] leading-normal text-[#000] opacity-95">文章</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none" class="mx-[12px] flex-none"><path d="M13 1L1 11" stroke="black"></path></svg><div class="flex flex-nowrap overflow-hidden flex-auto"><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">视频模型</span><span class="flex-none text-[12px] font-[400] leading-[18px] bg-[#f4f4f4] text-[#000] px-[8px] py-[4px] mr-[18px]">海螺AI</span></div></div><span class="ml-[4px] text-[14px] text-[#000] opacity-95 leading-[18px] font-[350] whitespace-nowrap"></span></section><h3 class="px-[12px] h-[60px] line-clamp-2 p-0 m-0 text-[18px] leading-[30px] font-[500] mb-[18px] text-[#000] opacity-95 ">遍布180个地区的海螺AI创作者玩转MiniMax视频模型！</h3><article class="flex mb-[36px] px-[12px]"><div class="h-[57px] line-clamp-3 break-all text-[14px] font-[400] text-[#000] leading-[19px] tracking-[0.5px]">五周前，我们发布了视频模型并在海螺AI中上线，无限创意在这里解锁迸发。在过去的一个月内，海螺AI网页版访问量增速超800%，荣登AI产品榜（web）9月全球增速榜、国内增速榜双榜单 TOP 1。来自全球超180个国家和地区的AI创作者与影视导演、编剧，正用海螺AI的魔力不断挑战和拓展创作的边界。</div></article><div class="pr-[12px] flex justify-end"><div class="ArrowButton_button__hcGfb flex justify-center items-center w-[142px] h-[50px] rounded-[60px] bg-[#F7F8FA] text-[14px] text-[#181E25] font-[500] leading-normal"><span class="undefined">阅读更多</span><div class="ArrowButton_arrow-wrapper__4uafM undefined"><div class="ArrowButton_arrow__HMO8r undefined"></div></div></div></div></section></a></div><div class="swiper-slide ThreeBody_placeholder__wh2ru" style="width: calc(50% - 1588px);"></div></div></div></div>
-`;
-// newDiv.class = "w-full h-full mx-auto overflow-scroll relative pt-[0px] flex flex-col 
-// 设置初始样式为隐藏
 
 
 // 创建一个新的 <div> 元素
@@ -42,24 +39,24 @@ const newMain = document.createElement("main");
 
 // 设置 <div> 的内容
 newMain.innerHTML = `
-  <main class="bg-[#000] px-[64px] pt-[80px] undefined pb-[80px]" id="my-main">
-	<section class="mx-auto max-w-[1820px] pb-[80px] lg:flex md:justify-between md:h-[328px] text-[16px] leading-[24px] [border-bottom:1px_solid_#323232]">
-		<div><img alt="logo" loading="lazy" width="200" height="64" decoding="async" data-nimg="1" class="mt-[-6px] mb-[24px]" style="color:transparent" src="static/picture/6bef0882-3057-455c-a4ad-2f63ed292be2.png">
+  <main class="bg-[#000] px-[64px] pt-[80px] undefined " id="my-main" >
+	<section class="mx-auto max-w-[1820px] pb-[80px] lg:flex md:justify-between md:h-[328px] text-[16px] leading-[24px] ">
+		<div><img alt="logo" loading="lazy" width="200" height="64" decoding="async" data-nimg="1" class="mt-[-6px] mb-[24px]" src="https://filecdn.minimax.chat/public/6bef0882-3057-455c-a4ad-2f63ed292be2.png?x-oss-process=image/format,webp" style="color: transparent;">
 			<div class="flex gap-[12px] mb-[8px]">
-				<div class="hover:cursor-pointer group"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewbox="0 0 36 36" fill="none">
-						<path fill-rule="evenodd" clip-rule="evenodd"
+				<div class="hover:cursor-pointer group"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+						<path
 							d="M20.3046 16.7523L26.3733 9.84961H24.9354L19.6636 15.8418L15.4561 9.84961H10.6021L16.9661 18.9117L10.6021 26.1496H12.0399L17.6037 19.8201L22.048 26.1496H26.9021L20.3046 16.7523ZM18.3346 18.9913L17.6888 18.0883L12.5585 10.9103H14.7674L18.9089 16.7054L19.552 17.6083L24.9347 25.1406H22.7258L18.3346 18.9913Z"
 							fill="#fff"></path>
 					</svg></div>
 				<div class="hover:cursor-pointer group">
-						<img width="36" height="36" viewbox="0 0 36 36" src="./public/131144.png" style="object-fit: contain;" />
+						<img width="36" height="36" viewbox="0 0 36 36" src="../public/131144.png" style="object-fit: contain;" />
 					</div>
-				<div class="hover:cursor-pointer group cursor-pointer"><svg width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
+				<div class="hover:cursor-pointer group"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd"
 							d="M9.75195 12.536C9.75195 11.4709 10.6154 10.6074 11.6805 10.6074H25.8234C26.8885 10.6074 27.752 11.4709 27.752 12.536V12.9756L19.2449 18.648C19.1249 18.7252 18.9508 18.7802 18.7519 18.7802C18.5531 18.7802 18.379 18.7252 18.259 18.648L9.75195 12.9757V12.536ZM9.75195 14.9073V23.4646C9.75195 24.5297 10.6154 25.3931 11.6805 25.3931H25.8234C26.8885 25.3931 27.752 24.5297 27.752 23.4646V14.9073L20.132 19.9881L20.1246 19.9931C19.7201 20.2564 19.2343 20.3874 18.7519 20.3874C18.2696 20.3874 17.7838 20.2564 17.3793 19.993L17.3718 19.9882L9.75195 14.9073Z"
 							fill="#fff"></path>
 					</svg></div>
-				<div class="hover:cursor-pointer group"><svg width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<div class="hover:cursor-pointer group"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_443_32320)">
 							<path
 								d="M18.0001 8C12.4779 8 8 12.5904 8 18.2532C8 22.7833 10.8653 26.6266 14.8387 27.9824C15.3384 28.0773 15.5219 27.76 15.5219 27.4891C15.5219 27.2446 15.5126 26.437 15.5083 25.5802C12.7263 26.2004 12.1393 24.3705 12.1393 24.3705C11.6844 23.1854 11.0289 22.8702 11.0289 22.8702C10.1216 22.2339 11.0973 22.2469 11.0973 22.2469C12.1015 22.3193 12.6303 23.3035 12.6303 23.3035C13.5222 24.871 14.9697 24.4178 15.5403 24.1559C15.6301 23.4932 15.8892 23.0409 16.1752 22.7848C13.954 22.5256 11.6191 21.6464 11.6191 17.7177C11.6191 16.5982 12.0098 15.6836 12.6495 14.9656C12.5456 14.7073 12.2034 13.6645 12.7463 12.2522C12.7463 12.2522 13.5861 11.9766 15.4971 13.3032C16.2948 13.076 17.1502 12.9621 18.0001 12.9582C18.8499 12.9621 19.7061 13.076 20.5052 13.3032C22.4139 11.9766 23.2525 12.2522 23.2525 12.2522C23.7968 13.6645 23.4544 14.7073 23.3505 14.9656C23.9917 15.6836 24.3797 16.5982 24.3797 17.7177C24.3797 21.6557 22.0403 22.5228 19.8135 22.7767C20.1722 23.0949 20.4918 23.7188 20.4918 24.6754C20.4918 26.0473 20.4802 27.1514 20.4802 27.4891C20.4802 27.762 20.6602 28.0817 21.1671 27.981C25.1383 26.6237 28 22.7818 28 18.2532C28 12.5904 23.5227 8 18.0001 8Z"
@@ -73,12 +70,12 @@ newMain.innerHTML = `
 							<path d="M15.4749 24.5164C15.4891 24.5981 15.4066 24.6819 15.2888 24.7043C15.1729 24.7258 15.0656 24.6754 15.0509 24.5944C15.0365 24.5106 15.1205 24.4267 15.2362 24.4051C15.3542 24.3842 15.4598 24.4333 15.4749 24.5164Z" fill="white"></path>
 						</g>
 						<defs>
-							<clippath id="clip0_443_32320">
+							<clipPath id="clip0_443_32320">
 								<rect width="20" height="20" fill="white" transform="translate(8 8)"></rect>
-							</clippath>
+							</clipPath>
 						</defs>
 					</svg></div>
-				<div class="hover:cursor-pointer group"><svg width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<div class="hover:cursor-pointer group"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_443_40935)">
 							<path
 								d="M17.9371 26.0622C19.078 26.0622 20.2077 25.8375 21.2617 25.4009C22.3157 24.9643 23.2734 24.3244 24.0802 23.5177C24.8869 22.7109 25.5268 21.7532 25.9634 20.6992C26.4 19.6452 26.6247 18.5155 26.6247 17.3746C26.6247 16.2337 26.4 15.104 25.9634 14.05C25.5268 12.996 24.8869 12.0383 24.0802 11.2315C23.2734 10.4248 22.3157 9.78491 21.2617 9.34832C20.2077 8.91172 19.078 8.68701 17.9371 8.68701C15.633 8.68701 13.4233 9.60231 11.794 11.2315C10.1648 12.8608 9.24951 15.0705 9.24951 17.3746C9.24951 19.6787 10.1648 21.8884 11.794 23.5177C13.4233 25.1469 15.633 26.0622 17.9371 26.0622Z"
@@ -111,74 +108,55 @@ newMain.innerHTML = `
 								fill="white"></path>
 						</g>
 						<defs>
-							<clippath id="clip0_443_40935">
+							<clipPath id="clip0_443_40935">
 								<rect width="22" height="22" fill="white" transform="translate(7 7)"></rect>
-							</clippath>
+							</clipPath>
 						</defs>
 					</svg></div>
 			</div>
 		</div>
 		<div class="flex w-[684px] md:w-[684px] md:h-[188px] mt-[24px] lg:mt-0 lg:h-[248px] flex-wrap md:flex-nowrap gap-[40px]">
 			<div class="flex flex-col flex-1 min-w-0">
-				<div class="text-[16px] text-[#fff] font-[500] leading-normal">技术前沿</div>
-				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/minimax-01-%E7%B3%BB%E5%88%97.html">文本模型</a><a
-						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/t2a-01-hd-%E5%8F%91%E5%B8%83.html">语音模型</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]"
-						target="_self" href="/s2v-01%E5%8F%91%E5%B8%83.html">视频模型</a></div>
+				<div class="text-[16px] text-[#fff] font-[500] leading-normal">Technology</div>
+				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/minimax-01-series-2.html">Text</a><a
+						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/speech-01-hd-release.html">Speech</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]"
+						target="_self" href="/en/s2v-01-release.html">Video</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/music-01.html">Music</a></div>
 			</div>
 			<div class="flex flex-col flex-1 min-w-0">
-				<div class="text-[16px] text-[#fff] font-[500] leading-normal">最新更新</div>
-				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/minimax-01-%E7%B3%BB%E5%88%97.html">MiniMax-Text-01</a><a
-						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/s2v-01%E5%8F%91%E5%B8%83.html">S2V-01</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]"
-						target="_self" href="/t2a-01-hd-%E5%8F%91%E5%B8%83.html">T2A-01-HD</a></div>
+				<div class="text-[16px] text-[#fff] font-[500] leading-normal">Update</div>
+				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/minimax-01-series-2.html">MiniMax-Text-01</a><a
+						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/s2v-01-release.html">S2V-01</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self"
+						href="/en/speech-01-hd-release.html">T2A-01-HD</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/music-01.html">music-01</a></div>
 			</div>
 			<div class="flex flex-col flex-1 min-w-0">
-				<div class="text-[16px] text-[#fff] font-[500] leading-normal">产品</div>
-				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_blank" href="https://hailuoai.com/">海螺AI</a><a
-						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_blank" href="https://www.xingyeai.com/">星野</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self"
-						href="/platform.html">开放平台</a></div>
+				<div class="text-[16px] text-[#fff] font-[500] leading-normal">Product</div>
+				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_blank" href="https://hailuoai.video/">Hailuo AI</a><a
+						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_blank" href="https://www.talkie-ai.com/">Talkie</a></div>
 			</div>
 			<div class="flex flex-col flex-1 min-w-0">
-				<div class="text-[16px] text-[#fff] font-[500] leading-normal">关于我们</div>
-				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/news.html">新闻动态</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]"
-						target="_self" href="/about.html">公司简介</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_blank" href="https://vrfi1sk8a0.jobs.feishu.cn/index">社会招聘</a><a
-						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_blank" href="https://vrfi1sk8a0.jobs.feishu.cn/379481">校园招聘</a></div>
+				<div class="text-[16px] text-[#fff] font-[500] leading-normal">About us</div>
+				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/about.html">company</a></div>
 			</div>
 		</div>
-	</section>
-	<section class="mx-auto max-w-[1312px]">
-		<div class="flex flex-wrap justify-center"><span class="text-[#5C5F63] text-[14px] font-[400] leading-[21px] ml-4 mt-8">©上海稀宇科技有限公司 <!-- -->2025<!-- --> 版权所有</span><a class="ml-[16px] no-underline text-[14px] font-[400] text-[#5C5F63] leading-[21px] mt-8" target="_blank"
-				href="https://www.minimaxi.com/protocol/privacy-policy">隐私条款</a><a class="ml-[16px] no-underline text-[14px] font-[400] text-[#5C5F63] leading-[21px] mt-8" target="_blank" href="https://www.minimaxi.com/protocol/user-agreement">用户协议</a></div>
-		<div class="flex items-center flex-wrap justify-center"><a target="_blank" class="mt-2 flex items-center whitespace-nowrap no-underline text-[14px] font-[400] text-[#5C5F63] leading-[21px]" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402010179"><img alt="沪公网安备"
-					fetchpriority="high" width="14" height="14" decoding="async" data-nimg="1" class="mr-[4px]" style="color:transparent" src="static/picture/d3cb2fd4-f521-4944-88df-2789c20430ad.png"><span>沪公网安备 31010402010179号</span></a><a target="_blank"
-				class="mt-2 ml-[16px] whitespace-nowrap no-underline text-[14px] font-[400] text-[#5C5F63] leading-[21px]" href="https://beian.miit.gov.cn/">沪ICP备2023003282号-5</a><a target="_blank" class="ml-[16px] no-underline text-[14px] font-[400] text-[#5C5F63] leading-[21px] mt-2"
-				href="https://www.minimaxi.com/license/broadcasting-business-license">广播电视节目制作经营许可证：（沪）字第05352号</a><a target="_blank" class="mt-2 ml-[16px] whitespace-nowrap no-underline text-[14px] font-[400] text-[#5C5F63] leading-[21px]" href="https://whlyj.sh.gov.cn/index.html">沪网文〔2023〕1566-110
-				号</a></div>
 	</section>
 </main>
 `;
 
-// 设置初始样式为不可见
-
-
 // 设置 <div> 的样式或其他属性（可选）
-newMain.class = "bg-[#000] px-[64px] pt-[80px] undefined pb-[80px]";
-// newMain.style.color = "#333";
-// newMain.style.fontFamily = "Arial, sans-serif";
-//newDiv.style.display = "none";
-//newMain.style.display = "none"; 	
-newMain.style.visibility = "hidden"; 
-newDiv.style.visibility = "hidden";
+// newMain.class = "bg-[#000] px-[64px] pt-[80px] undefined pb-[80px]";
+
+newMain.style.display = "none";
+
 // 将新元素插入到页面中
 document.addEventListener("DOMContentLoaded", function () {
   // 插入到 <body> 的最后
-  document.body.appendChild(newDiv);
-  //
+  //document.body.appendChild(newDiv);
   document.body.appendChild(newMain);
-  //
   setTimeout(() => {
-    newDiv.style.visibility = "visible";
-	newMain.style.visibility = "visible";
-  }, 400); // 延迟 1 秒后显示
+    //newDiv.style.display = "block";
+	newMain.style.display = "block";
+  }, 20); // 延迟 1 秒后显示
+
 
 });
 
@@ -263,3 +241,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// 等待 DOM 加载完成
+// document.addEventListener("DOMContentLoaded", function () {
+//     // 查找所有 flex gap-[12px] mb-[8px] 父级 div
+//     const parentDivs = document.querySelectorAll("div.flex.gap-\\[12px\\].mb-\\[8px\\]");
+
+//     // 遍历每个父级 div
+//     parentDivs.forEach(function (parentDiv) {
+//         // 在当前父级 div 下查找所有 hover:cursor-pointer group 子 div
+//         const childDivs = parentDiv.querySelectorAll("div.hover\\:cursor-pointer.group");
+
+//         // 遍历每个子 div 并激活特效
+//         childDivs.forEach(function (childDiv) {
+//             // 添加点击事件
+//             childDiv.onclick = function () {
+//                 window.open("https://x.com/MiniMax__AI", "_blank");
+//             };
+
+//             // 如果需要插入 SVG，检查是否已经存在，避免重复添加
+//             if (!childDiv.querySelector("svg")) {
+//                 // 创建 SVG 元素
+//                 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+//                 svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+//                 svg.setAttribute("width", "36");
+//                 svg.setAttribute("height", "36");
+//                 svg.setAttribute("viewBox", "0 0 36 36");
+//                 svg.setAttribute("fill", "none");
+
+//                 // 将 SVG 添加到子 div
+//                 childDiv.appendChild(svg);
+//             }
+//         });
+//     });
+// });
