@@ -185,11 +185,11 @@
 						icon: "https://filecdn.minimax.chat/public/0397b5e5-2bbf-4809-87a8-152ccec93384.png?x-oss-process=image/format,webp",
 						subMenu: [{
 							title: "official_website_navigation_tech_text_1",
-							link: "https://minimaxi.com/news/minimax-01-series-2",
-							isNew: !0
+							link: "https://minimax.io/news/minimax-01-series-2",
+							isNew: !0 
 						}, {
 							title: "official_website_navigation_tech_text_2",
-							link: "https://minimaxi.com/news/minimax-01-series-2",
+							link: "https://minimax.io/news/minimax-01-series-2",
 							isNew: !0
 						}, {
 							title: "official_website_navigation_tech_text_3",

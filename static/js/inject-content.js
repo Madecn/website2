@@ -19,7 +19,7 @@ document.createElement = function (tagName) {
       console.log("Removing the 4th element:", elements[3]); // 打印日志
       elements[3].remove(); // 删除第 4 个元素
       hasRemoved = true; // 设置标志位为 true，停止后续检测
-      console.log("Stopped detection after removing the 4th element");
+    //   console.log("Stopped detection after removing the 4th element");
     }
   }, 0);
 

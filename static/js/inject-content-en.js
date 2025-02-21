@@ -19,7 +19,7 @@ document.createElement = function (tagName) {
       if (hiddenElements.has(targetElement) || targetElement.id === "my-main") return;
 
       // 打印日志，确认找到目标元素
-      console.log("Hiding the target element:", targetElement);
+    //   console.log("Hiding the target element:", targetElement);
 
       // 删除目标元素
       targetElement.remove();
