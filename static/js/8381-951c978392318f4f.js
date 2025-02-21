@@ -422,7 +422,7 @@
 						M && "official_website_navigation_aboutus" === i.title || d(i)
 					}, [M]),
 					z = (0, l.useCallback)(function(i) {
-						M && "official_website_navigation_aboutus" === i.title && Z.push("https://minimax.io/about")
+						M && "official_website_navigation_aboutus" === i.title && Z.push("https://minimax.com/about")
 					}, [M]),
 					I = (0, l.useCallback)(function() {
 						d(null)
