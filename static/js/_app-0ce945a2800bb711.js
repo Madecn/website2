@@ -12911,7 +12911,7 @@
 											"@type": "ListItem",
 											position: 1,
 											name: "Minimax",
-											item: "https://minimax.com/en"
+											item: "https://minimaxi.com/en"
 										}]
 									}, {
 										"@type": "Organization",
