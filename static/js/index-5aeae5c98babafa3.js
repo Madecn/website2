@@ -901,7 +901,7 @@
 					desc: "official_website_banner4_0",
 					style: "dark",
 					marginBottom: 20,
-					detailLink: "/t2a-01-hd-%E5%8F%91%E5%B8%83",
+					detailLink: "https://minimaxi.com/news/t2a-01-hd-%E5%8F%91%E5%B8%83",
 					detailLink_en: "/speech-01-hd-release"
 				}, {
 					bgImg: "https://filecdn.minimax.chat/public/ff2b7d0a-cc5e-461d-84b7-f37e10bc7f94.png?x-oss-process=image/format,webp",
@@ -909,7 +909,7 @@
 					desc: "official_website_banner6_0",
 					style: "dark",
 					marginBottom: 20,
-					detailLink: "/%E9%9F%B3%E4%B9%90%E6%A8%A1%E5%9E%8Bmusic-01",
+					detailLink: "https://minimaxi.com/news/%E9%9F%B3%E4%B9%90%E6%A8%A1%E5%9E%8Bmusic-01",
 					detailLink_en: "/music-01"
 				}],
 				A = n(53462),
@@ -1503,7 +1503,7 @@
 					titleClass: "[&]:!mb-[12px] [&]:!text-[52px]",
 					desc: "official_website_banner1_0",
 					descClass: "[&]:!leading-[21px] [&]:!text-[14px] [&]:!mb-[12px] [&]:!line-clamp-2",
-					detailLink: "/%E4%B8%AD%E6%96%87-%E6%8A%80%E6%9C%AF%E5%89%8D%E6%B2%BF-%E5%8D%A1%E7%89%871",
+					detailLink: "https://minimaxi.com/news/%E4%B8%AD%E6%96%87-%E6%8A%80%E6%9C%AF%E5%89%8D%E6%B2%BF-%E5%8D%A1%E7%89%871",
 					detailLink_en: "/card-1",
 					buttons: [{
 						text: "official_website_banner1_1",
@@ -1525,7 +1525,7 @@
 					videoSrc: "https://filecdn.minimax.chat/public/40d8ee02-7fda-4f96-9330-092dcb94ba7e.mp4",
 					title: "official_website_banner5",
 					desc: "official_website_banner5_0",
-					detailLink: "/i2v-01-live-%E5%8F%91%E5%B8%83",
+					detailLink: "https://minimaxi.com/news/i2v-01-live-%E5%8F%91%E5%B8%83",
 					detailLink_en: "/i2v-01-live-release",
 					videoPoster: "https://filecdn.minimax.chat/public/d49ea189-b743-4f00-a12b-9b1686c3ed1a.png?x-oss-process=image/format,webp"
 				}, {
@@ -1534,7 +1534,7 @@
 					desc: "official_website_banner4_0",
 					type: "black",
 					marginBottom: 16,
-					detailLink: "/t2a-01-hd-%E5%8F%91%E5%B8%83",
+					detailLink: "https://minimaxi.com/news/t2a-01-hd-%E5%8F%91%E5%B8%83",
 					detailLink_en: "/speech-01-hd-release"
 				}, {
 					bgImg: "https://filecdn.minimax.chat/public/ff2b7d0a-cc5e-461d-84b7-f37e10bc7f94.png?x-oss-process=image/format,webp",
@@ -1542,7 +1542,7 @@
 					desc: "official_website_banner6_0",
 					style: "dark",
 					marginBottom: 20,
-					detailLink: "/%E9%9F%B3%E4%B9%90%E6%A8%A1%E5%9E%8Bmusic-01",
+					detailLink: "https://minimaxi.com/news/%E9%9F%B3%E4%B9%90%E6%A8%A1%E5%9E%8Bmusic-01",
 					detailLink_en: "/music-01"
 				}],
 				eo = n(49501),

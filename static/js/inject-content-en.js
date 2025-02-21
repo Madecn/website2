@@ -118,15 +118,15 @@ newMain.innerHTML = `
 		<div class="flex w-[684px] md:w-[684px] md:h-[188px] mt-[24px] lg:mt-0 lg:h-[248px] flex-wrap md:flex-nowrap gap-[40px]">
 			<div class="flex flex-col flex-1 min-w-0">
 				<div class="text-[16px] text-[#fff] font-[500] leading-normal">Technology</div>
-				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/minimax-01-series-2.html">Text</a><a
-						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/speech-01-hd-release.html">Speech</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]"
-						target="_self" href="/en/s2v-01-release.html">Video</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/music-01.html">Music</a></div>
+				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="https://minimax.io/news/minimax-01-series-2.html">Text</a><a
+						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="https://minimax.io/news/speech-01-hd-release.html">Speech</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]"
+						target="_self" href="https://minimax.io/news/s2v-01-release.html">Video</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="https://minimax.io/news/music-01.html">Music</a></div>
 			</div>
 			<div class="flex flex-col flex-1 min-w-0">
 				<div class="text-[16px] text-[#fff] font-[500] leading-normal">Update</div>
-				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/minimax-01-series-2.html">MiniMax-Text-01</a><a
-						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/s2v-01-release.html">S2V-01</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self"
-						href="/en/speech-01-hd-release.html">T2A-01-HD</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/music-01.html">music-01</a></div>
+				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="https://minimax.io/news/minimax-01-series-2.html">MiniMax-Text-01</a><a
+						class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="https://minimax.io/news/s2v-01-release.html">S2V-01</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self"
+						href="https://minimax.io/news/speech-01-hd-release.html">T2A-01-HD</a><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="https://minimax.io/news/music-01.html">music-01</a></div>
 			</div>
 			<div class="flex flex-col flex-1 min-w-0">
 				<div class="text-[16px] text-[#fff] font-[500] leading-normal">Product</div>
@@ -135,7 +135,7 @@ newMain.innerHTML = `
 			</div>
 			<div class="flex flex-col flex-1 min-w-0">
 				<div class="text-[16px] text-[#fff] font-[500] leading-normal">About us</div>
-				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="/en/about.html">company</a></div>
+				<div class="flex flex-col mt-[24px]"><a class="no-underline text-[14px] text-[#fff] whitespace-nowrap leading-[21px] font-[300] mb-[16px]" target="_self" href="https://minimax.io/news/about.html">company</a></div>
 			</div>
 		</div>
 	</section>

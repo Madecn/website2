@@ -571,7 +571,7 @@
 					title: "关于我们",
 					items: [{
 						label: "新闻动态",
-						link: "/news.html"
+						link: "https://minimaxi.com/news"
 					}, {
 						label: "公司简介",
 						link: "/about.html"
