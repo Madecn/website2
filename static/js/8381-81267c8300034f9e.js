@@ -33,7 +33,7 @@
 					icon: "https://filecdn.minimax.chat/public/6204533f-1614-4108-966b-ce3c92d6f8fe.png?x-oss-process=image/format,webp",
 					subMenu: [{
 						title: "official_website_navigation_product_platform_1",
-						link: "/en/platform.html"
+						link: "https://www.minimax.io/platform_overview"
 					}, {
 						title: "official_website_navigation_product_platform_2",
 						link: "".concat(n.vi, "/examination-center/text-experience-center/cc_v2")
@@ -74,7 +74,7 @@
 					icon: "https://filecdn.minimax.chat/public/6204533f-1614-4108-966b-ce3c92d6f8fe.png?x-oss-process=image/format,webp",
 					subMenu: [{
 						title: "official_website_navigation_product_platform_1",
-						link: "/en/platform.html"
+						link: "https://www.minimax.io/platform_overview"
 					}, {
 						title: "official_website_navigation_product_platform_3",
 						link: "".concat(n.RI, "/document/platform%20introduction?key=66701c8e1d57f38758d58198")
